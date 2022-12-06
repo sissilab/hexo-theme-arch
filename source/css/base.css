@@ -667,6 +667,28 @@ a:hover {
   padding: 0 10px;
 }
 
+.switchlang-icon {
+  position: relative
+}
+
+.switchlang-content {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.switchlang-content.hidden {
+  opacity: 0;
+  z-index: -1;
+  right: -10px;
+}
+
 .pin-copy {
   position: relative;
 }
@@ -696,4 +718,7 @@ a:hover {
   font-size: 1rem;
   line-height: 1rem;
   white-space: nowrap;
+}
+
+.icon-lang-switcher {
 }
