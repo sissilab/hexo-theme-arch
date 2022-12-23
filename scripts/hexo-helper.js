@@ -1,9 +1,5 @@
 /* global hexo */
 
-hexo.extend.helper.register('is_root', isRoot);
-hexo.extend.helper.register('get_langs', getLangs);
-hexo.extend.helper.register('switch_lang', switchLang);
-
 function isRoot() {
   return this.page.path === 'index.html';
 }
@@ -22,3 +18,7 @@ function switchLang(lang) {
   }
   return '';
 }
+
+hexo.extend.helper.register('is_root', isRoot);
+hexo.extend.helper.register('get_langs', getLangs);
+hexo.extend.helper.register('switch_lang', switchLang);

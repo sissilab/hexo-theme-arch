@@ -6,10 +6,14 @@
 <div class="container archives">
   <div class="post-list">
     <%
+      var pageBase = page.base;
+      if ('/' != pageBase.charAt(0)) {
+        pageBase = '/' + pageBase;
+      }
       var prev = -10086;// prev year
       var curr;// curr year, ever step be updated
 
-      site.posts.sort('date', -1).each(function(item, index) {
+      page.posts.sort('date', -1).each(function(item, index) {
         curr = item.date.year()
         if (curr !== prev) {
           prev = curr;
@@ -17,7 +21,7 @@
         <!-- 后续文章的发布年份呈现 -->
         <div class="content-title">
           <h2>
-            <span><%- curr %></span>
+            <a href="<%- pageBase %><%- curr %>"><%- curr %></a>
           </h2>
         </div>
       <%
@@ -35,4 +39,13 @@
       });
     %>
   </div>
+  <nav class="post-navigation">
+    <% if(page.prev !== 0){ %>
+      <a href="<%- url_for(page.prev_link)%>"><i class="iconfont icon-angleleft"></i></a>
+    <% } %>
+    <span class="page-num"><%- page.current %> / <%- page.total -%></span>
+    <% if(page.next !== 0){ %>
+      <a href="<%- url_for(page.next_link)%>"><i class="iconfont icon-angleright"></i></a>
+    <% } %>
+  </nav>
 </div>
