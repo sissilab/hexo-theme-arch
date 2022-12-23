@@ -5,7 +5,7 @@
     </i>
   </a>
 
-  <% let currentPath = page.path && page.path.indexOf('/') >= 0 ? url_for(page.path.substr(page.path.indexOf('/'))) : '' %>
+  <% let currentPath = page.path && page.path.indexOf('/') >= 0 ? page.path.substr(page.path.indexOf('/')) : '' %>
 
   <div class="switchlang-content hidden">
     <% config.language.forEach(function(item) {

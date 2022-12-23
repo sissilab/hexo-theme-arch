@@ -10,19 +10,19 @@
 <% } %>
 
 <% if (page.type === "tags") { %>
-  <!-- 标签页 url形式：https://yoursite/tags/ -->
+  <!-- 标签页 url形式：https://yoursite/:lang/tags/ -->
   <div class="container tag-index">
     <div>
-      <%- list_tags({ class: "tag" }) %>
+      <%- list_my_tags(site.tags, {class: "tag", orderby: "length", order: -1}) %>
     </div>
   </div>
   <% } %>
 
   <% if (page.type === "categories") { %>
-  <!-- 分类页 url形式：https://yoursite/categories/ -->
+  <!-- 分类页 url形式：https://yoursite/:lang/categories/ -->
   <div class="container category-index">
     <div>
-      <%- list_categories({orderby: "length", order: -1}) %>
+      <%- list_my_categories(site.categories, {orderby: "length", order: -1}) %>
     </div>
   </div>
   <% } %>
@@ -50,7 +50,7 @@
   <% } %>
 
   <% if(page.type === "about") { %>
-  <!-- 关于页 url形式：https://yoursite/about/ -->
+  <!-- 关于页 url形式：https://yoursite/:lang/about/ -->
     <div class="container about-index">
       <div class="markdown-body">
         <%- page.content %>
@@ -75,7 +75,7 @@
                 <i class="iconfont icon-tags mr-10" title="<%= __('tags') %>"></i>
                 <% for(let item of page.tags.data) { %>
                 <span class="span--tag mr-8">
-                  <a href="<%= url_for(item.path)%>" title="<%- item.name %>">
+                  <a href="<%= url_for('/' + page.lang + '/' + item.path) %>" title="<%- item.name %>">
                     #<%- item.name %>
                   </a>
                 </span>
@@ -89,7 +89,7 @@
                 <i class="iconfont icon-bookmark" title="<%= __('categories') %>"></i>
                 <% for(let item of page.categories.data){ %>
                 <span class="span--category">
-                  <a href="<%= url_for(item.path)%>" title="<%- item.name %>">
+                  <a href="<%= url_for('/' + page.lang + '/' + item.path) %>" title="<%- item.name %>">
                     <b>#</b> <%- item.name %>
                   </a>
                 </span>
@@ -124,7 +124,7 @@
                     <i class="iconfont icon-tags mr-10" title="<%= __('tags') %>"></i>
                     <% for(let item of page.tags.data) { %>
                     <span class="span--tag mr-8">
-                      <a href="<%= url_for(item.path)%>" title="<%- item.name %>">
+                      <a href="<%= url_for('/' + page.lang + '/' + item.path)%>" title="<%- item.name %>">
                         #<%- item.name %>
                       </a>
                     </span>
@@ -138,7 +138,7 @@
                     <i class="iconfont icon-bookmark" title="<%= __('categories') %>"></i>
                     <% for(let item of page.categories.data){ %>
                     <span class="span--category">
-                      <a href="<%= url_for(item.path)%>" title="<%- item.name %>">
+                      <a href="<%= url_for('/' + page.lang + '/' + item.path)%>" title="<%- item.name %>">
                         <b>#</b> <%- item.name %>
                       </a>
                     </span>
