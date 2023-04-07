@@ -104,14 +104,16 @@
       </div>
       <% if(theme.prevnext.enable) { %>
         <div class="prev-or-next">
-          <div class="post-foot-next">
-            <% if(page.next) { %>
-              <a href="<%- url_for(page.next.path) %>" target="_self">
+
+          <div class="post-foot-prev">
+            <% if(has_page_prev(page)) { %>
+              <a href="<%- url_for(get_page_prev_path(page)) %>" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span><%= __('prev') %></span>
               </a>
             <% } %>
           </div>
+
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="<%= __('updateTime') %>"></i>
@@ -148,14 +150,16 @@
               }
             } %>
           </div>
-          <div class="post-foot-prev">
-            <% if(page.prev) { %>
-              <a href="<%- url_for(page.prev.path) %>" target="_self">
+
+          <div class="post-foot-next" >
+            <% if(has_page_next(page)) { %>
+              <a href="<%- url_for(get_page_next_path(page)) %>" target="_self">
                 <span><%= __('next') %></span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
             <% } %>
           </div>
+
         </div>
       <% } %>
     </div>
