@@ -88,9 +88,9 @@
               <span class="post-categories">
                 <i class="iconfont icon-bookmark" title="<%= __('categories') %>"></i>
                 <% for(let item of page.categories.data){ %>
-                <span class="span--category">
+                <span class="span--category">&nbsp;/
                   <a href="<%= url_for('/' + page.lang + '/' + item.path) %>" title="<%- item.name %>">
-                    <b>#</b> <%- item.name %>
+                    <%- item.name %>
                   </a>
                 </span>
                 <% } %>
@@ -139,9 +139,9 @@
                   <span class="post-categories">
                     <i class="iconfont icon-bookmark" title="<%= __('categories') %>"></i>
                     <% for(let item of page.categories.data){ %>
-                    <span class="span--category">
+                    <span class="span--category">&nbsp;/
                       <a href="<%= url_for('/' + page.lang + '/' + item.path)%>" title="<%- item.name %>">
-                        <b>#</b> <%- item.name %>
+                        <%- item.name %>
                       </a>
                     </span>
                     <% } %>
