@@ -672,7 +672,6 @@ a:hover {
 }
 
 .switchlang-content {
-  width: 100px;
   position: absolute;
   top: 0;
   right: 30px;
@@ -687,6 +686,10 @@ a:hover {
   opacity: 0;
   z-index: -1;
   right: -10px;
+}
+
+.lang-item {
+  width: 55px;
 }
 
 .pin-copy {
