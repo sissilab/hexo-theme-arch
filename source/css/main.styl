@@ -9,10 +9,11 @@
 @import '_common/components'
 
 $theme-color = convert(hexo-config('themeColor'))
+$code-color = convert(hexo-config('codeColor'))
 
 .markdown-body {
   code {
-    color: $theme-color;
+    color: $code-color;
   }
   a {
     &:hover {
