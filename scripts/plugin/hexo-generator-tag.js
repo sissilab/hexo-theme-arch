@@ -34,6 +34,7 @@ function generateTag(locals) {
     return result;
   }, []);
 
+  console.log('>>> Generated tag: ', pages.map(p => p.path));
   return pages;
 };
 

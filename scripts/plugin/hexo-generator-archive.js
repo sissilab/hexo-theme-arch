@@ -119,6 +119,7 @@ function generateArchive(locals) {
     }
   }
 
+  console.log('>>> Generated archive: ', result.map(r => r.path));
   return result;
 };
 

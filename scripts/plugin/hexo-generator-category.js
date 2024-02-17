@@ -34,6 +34,7 @@ function generateCategory(locals) {
     return result;
   }, []);
 
+  console.log('>>> Generated category: ', pages.map(p => p.path));
   return pages;
 };
 

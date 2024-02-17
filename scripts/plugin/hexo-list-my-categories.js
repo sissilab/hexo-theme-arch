@@ -130,6 +130,7 @@ function listCategoriesHelper(categories, options) {
     return `<ul class="${className}-list">${hierarchicalList(0)}</ul>`;
   }
 
+  console.log('>>> Generated list_my_categories: ');
   return flatList(0);
 }
 
