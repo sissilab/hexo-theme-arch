@@ -1,3 +1,4 @@
+/*for https://yoursite/:lang/tags/*/
 'use strict';
 
 const { url_for, escapeHTML } = require('hexo-util');

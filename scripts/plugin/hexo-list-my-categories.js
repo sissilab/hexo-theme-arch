@@ -1,3 +1,4 @@
+/*for https://yoursite/:lang/categories/*/
 'use strict';
 
 const { url_for } = require('hexo-util');

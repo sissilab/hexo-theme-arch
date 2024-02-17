@@ -91,7 +91,7 @@ navbar:
     key: archives
   -
     name: Categories
-    enable: false
+    enable: true
     path: /categories/
     key: categories
   -
@@ -100,13 +100,8 @@ navbar:
     path: /tags/
     key: tags
   -
-    name: Friends
-    enable: true
-    path: /friends/
-    key: friends
-  -
     name: About
-    enable: false
+    enable: true
     path: /about/
     key: about
 
