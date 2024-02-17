@@ -10,7 +10,7 @@
   <div class="switchlang-content hidden">
     <% config.language.forEach(function(item) {
       if (item && item !== 'default') { %>
-        <a class="lang-item" href="/<%- item + currentPath %>" title="<%- item %>">
+        <a class="lang-item" href="<%- url_for('/' + item + currentPath) %>" title="<%- item %>">
           <%= __(item) %>
         </a>
     <% } }) %>

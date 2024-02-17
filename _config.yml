@@ -1,22 +1,22 @@
-# 相关配置说明
-  # favicon: 网站图标
-  # avatar: 主题用户头像与昵称
-  # rss: rss订阅
-  # gtag: Google 分析
-  # comments: 文章评论系统
+# Configuration Instruction:
+  # favicon: website icon
+  # avatar: User avatar and nickname in the theme
+  # rss: RSS feed
+  # gtag: Google Analytics
+  # comments: Article commenting system
     # gitalk
     # disqus
-  # navbar: 主题页面导航栏
-  # catalog: 文章目录
-  # prevnext: 文章末尾的上一页与下一页
-  # friends: 友链
-  # footer: 页脚信息
-  # search: 文章搜索
-  # colorSwitch: 深/浅配色切换
-  # postShare: 文章分享
-  # codeBlock: 代码块配置
+  # navbar: Theme page navigation bar
+  # catalog: Article table of contents
+  # prevnext: Previous and next page at the end of the article
+  # friends: Friends' links
+  # footer: Footer information
+  # search: Article search
+  # colorSwitch: Dark/light color scheme switch
+  # postShare: Article sharing
+  # codeBlock: Code block configuration
 
-# enable: 是否开启相应功能，可选true || false
+# enable: Whether to enable the corresponding feature, optional true or false
 
 # 网站图标
 favicon:
@@ -27,7 +27,7 @@ favicon:
 # 用户头像与昵称
 avatar:
   author_photo: /images/avatar.png
-  author_nickname: Oranges
+  author_nickname: X.R.
   path: /
 
 # Google 分析
@@ -40,7 +40,7 @@ gtag:
 
 # 文章评论系统
 comments:
-  enable: true
+  enable: false
   # 目前仅支持gitalk, valine, disqus评论，选择喜欢的一种开启即可
 
   gitalk:
@@ -104,6 +104,11 @@ navbar:
     enable: true
     path: /about/
     key: about
+  -
+    name: Friends
+    enable: true
+    path: /friends/
+    key: friends
 
 # 文章目录
 catalog:
@@ -130,7 +135,6 @@ friends:
 # 页脚信息
 footer:
   # social: 社交方式
-  # more: 更多页脚信息
   social:
     # name: 名称
     # icon: 图标，目前仅支持IconFont部分图标
@@ -140,11 +144,11 @@ footer:
     -
       name: github
       icon: github
-      path: https://github.com/zchengsite/hexo-theme-oranges
-    # -
-    #   name: email
-    #   icon: envelope
-    #   path: 
+      path: https://github.com/sissilab
+    -
+      name: email
+      icon: envelope
+      path: mailto:xiangru.au@gmail.com
     # -
     #   name: facebook
     #   icon: facebooksquare
@@ -168,16 +172,17 @@ footer:
     #   icon: rss
     #   path: /atom.xml
 
+  # more: 更多页脚信息
   more:
     # 支持变量显示，可自定义扩展，具体见主题/layout/_partial/footer.ejs
     # 一般用来显示根据各种场景需要切换的文本，如时间年份
     # 如：{thisYear} 会被替换为今年年份
     -
-      name: Copyright © {thisYear} Oranges
-      path: https://github.com/zchengsite/hexo-theme-oranges
+      name: Copyright © {thisYear} Arch
+      path: https://github.com/sissilab/hexo-theme-arch
     -
-      name: Theme by Oranges | Powered by Hexo
-      path: https://github.com/zchengsite/hexo-theme-oranges
+      name: Theme by Arch | Powered by Hexo
+      path: https://github.com/sissilab/hexo-theme-arch
 
   # 浏览量统计
   # http://busuanzi.ibruce.info/
@@ -204,7 +209,7 @@ footer:
 # 文章搜索
 search:
   enable: true
-  placeholder: 
+  placeholder: search...
 
 # 深/浅配色切换
 colorSwitch:
@@ -213,10 +218,8 @@ colorSwitch:
 # 文章分享
 postShare:
   enable: true
-
   twitter:
     enable: true
-
   facebook:
     enable: true
 

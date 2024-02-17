@@ -26,7 +26,7 @@
       loadWalineSuc(init)
     </script>
   <% } else { %>
-    <link rel="stylesheet" href="/plugins/waline.css">
+    <%- css('/plugins/waline.css') %>
     <script type="module">
       import { init } from '/plugins/waline.mjs'
       loadWalineSuc(init)
@@ -61,7 +61,8 @@
   <% if (theme.cdns && theme.cdns.comments.valine && theme.cdns.comments.valine.enable) { %>
     <script async type="text/javascript" src='<%- theme.cdns.comments.valine.url %>' onload="loadValineSuc(this)"></script>
   <% } else { %>
-    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+    <!-- <script async type="text/javascript" src="<%- config.context_path %>/plugins/valine.min.js" onload="loadValineSuc(this)"></script> -->
+    <%- js({ src: '/plugins/valine.min.js', async: true, type: 'text/javascript', onload: loadValineSuc(this) }) %>
   <% } %>
 
   <div id="vcomments"></div>
@@ -110,8 +111,8 @@
     <link rel="stylesheet" href="<%- theme.cdns.comments.gitalk.url.css %>">
     <script type="text/javascript" src="<%- theme.cdns.comments.gitalk.url.js %>" onload="loadGitalkSuc(this)"></script>
   <% } else { %>
-    <link rel="stylesheet" href="/plugins/gitalk.css">
-    <script type="text/javascript" src="/plugins/gitalk.min.js" onload="loadGitalkSuc(this)"></script>
+    <%- css('/plugins/gitalk.css') %>
+    <%- js({ src: '/plugins/gitalk.min.js', type: 'text/javascript', onload: loadGitalkSuc(this) }) %>
   <% } %>
 
 <% } %>

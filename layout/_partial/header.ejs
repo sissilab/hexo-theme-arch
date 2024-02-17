@@ -39,15 +39,15 @@
   </title>
 
   <% if (theme.favicon.enable){ %>
-    <link rel="apple-touch-icon" href="<%- theme.favicon.touch_icon %>">
-    <link rel="icon" href="<%- theme.favicon.icon %>">
+    <link rel="apple-touch-icon" href="<%- url_for(theme.favicon.touch_icon) %>">
+    <link rel="icon" href="<%- url_for(theme.favicon.icon) %>">
   <% } %>
 
   <!-- Raleway-Font -->
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <!-- hexo site css -->
-  <link rel="stylesheet" href="/css/main.css" />
+  <%- css(['/css/main.css'])%>
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
   <!-- 代码块风格 -->
   <% if (theme.codeBlock && theme.codeBlock.style && theme.codeBlock.style == 'mac-black'){ %>
@@ -58,7 +58,7 @@
   <% if (theme.cdns && theme.cdns.jquery && theme.cdns.jquery.enable) { %>
     <script defer type="text/javascript" src="<%- theme.cdns.jquery.url %>"></script>
   <% } else { %>
-    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+    <%- js({ src: '/plugins/jquery.min.js', defer: true, type: 'text/javascript' }) %>
   <% } %>
 
   <!-- fancybox -->
@@ -66,8 +66,8 @@
     <link href="<%- theme.cdns.fancybox.url.css %>" rel="stylesheet">
     <script defer type="text/javascript" src="<%- theme.cdns.fancybox.url.js %>"></script>
   <% } else { %>
-    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
-    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+    <%- css(['/plugins/jquery.fancybox.min.css'])%>
+    <%- js({ src: '/plugins/jquery.fancybox.min.js', defer: true, type: 'text/javascript' }) %>
   <% } %>
   <%- js(['/js/fancybox.js']) %>
 

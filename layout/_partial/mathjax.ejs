@@ -3,7 +3,8 @@
   <% if (theme.cdns && theme.cdns.mathjax && theme.cdns.mathjax.enable) { %>
     <script async type="text/javascript" src="<%- theme.cdns.mathjax.url %>"></script>
   <% } else { %>
-    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+    <!-- <script async type="text/javascript" src="<%- config.context_path %>/plugins/mathjax/tex-chtml.js"></script> -->
+    <%- js({ src: '/plugins/mathjax/tex-chtml.js', async: true, type: 'text/javascript' }) %>
   <% } %>
   <script>
     MathJax = {

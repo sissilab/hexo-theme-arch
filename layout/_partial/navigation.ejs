@@ -1,15 +1,18 @@
 <div class="header">
-  <input type="hidden" id="langlang" value="<%- page.lang %>">
+  <input type="hidden" id="xr-lang" value="<%- page.lang %>">
+  <input type="hidden" id="xr-context-path" value="<%- url_for() %>">
   <div class="avatar">
-    <a href="/<%- page.lang %><%- theme.avatar.path %>">
+    <a href="<%- url_for('/' + page.lang + '/' + theme.avatar.path) %>">
       <!-- 头像取消懒加载，添加no-lazy -->
       <% if (config.lazyload && config.lazyload.enable) { %>
-        <img no-lazy src="<%- theme.avatar.author_photo %>" alt="">
+        <img no-lazy src="<%- url_for(theme.avatar.author_photo) %>" alt="">
       <% } else { %>
-        <img src="<%- theme.avatar.author_photo %>" alt="">
+        <img src="<%- url_for(theme.avatar.author_photo) %>" alt="">
       <% } %>
     </a>
-    <div class="nickname"><a href="/<%- page.lang %><%- theme.avatar.path %>"><%- theme.avatar.author_nickname %></a></div>
+    <div class="nickname">
+      <%- link_to('/' + page.lang + theme.avatar.path, theme.avatar.author_nickname) %>
+    </div>
   </div>
   <div class="navbar">
     <ul>
@@ -17,8 +20,8 @@
         for(let item of theme.navbar) {
           if (item.enable) {
       %>
-        <li class="nav-item" data-path="/<%- page.lang %><%- item.path %>">
-          <a href="/<%- page.lang %><%- item.path %>"><%- item.name %></a>
+        <li class="nav-item" data-path="<%- url_for('/' + page.lang + item.path) %>">
+          <%- link_to('/' + page.lang + item.path, item.name) %>
         </li>
       <%
           }

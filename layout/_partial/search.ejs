@@ -185,8 +185,9 @@
     }
 
     var getSearchFile = function() {
-      var lang = document.getElementById('langlang')?.value || '';
-      var path = "/" + lang + "/search.xml";
+      var lang = document.getElementById('xr-lang')?.value || '';
+      var contextPath = document.getElementById('xr-context-path')?.value;
+      var path = (contextPath && contextPath.endsWith('/') ? contextPath : contextPath + '/') + lang + "/search.xml";
       searchFunc(path, 'search-input', 'search-result');
     }
   </script>
