@@ -7,7 +7,7 @@
 ## Features
 
 - [x] Original existing functions from [hexo-theme-oranges](README-oranges.md?tab=readme-ov-file#configuration)
-- [x] Support the publication of articles in ==multiple languages==
+- [x] Support the publication of articles in multiple languages
 - [x] Support accessing url with context path suffix
 
 ## Usage
