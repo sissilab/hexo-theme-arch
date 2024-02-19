@@ -8,6 +8,7 @@
 
 - [x] Original existing functions from [hexo-theme-oranges](README-oranges.md?tab=readme-ov-file#configuration)
 - [x] Support the publication of articles in multiple languages
+- [x] Add switch-language icon <svg t="1670338371149" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1377" width="16" height="16"><path d="M890.688 576h-124.672c-6.2912 100.928-27.264 192.7296-58.5216 266.5792 95.36-56.512 164.16-153.1072 183.1936-266.5792z m0-128c-19.0336-113.472-87.8336-210.0672-183.1936-266.5792 31.2512 73.856 52.2304 165.6576 58.528 266.5792h124.672zM133.312 448h124.672c6.2912-100.928 27.264-192.7296 58.5216-266.5792C221.1456 237.9328 152.3456 334.528 133.312 448z m0 128c19.0336 113.472 87.8336 210.0672 183.1936 266.5792-31.2512-73.856-52.2304-165.6576-58.528-266.5792H133.312z m504.416 0h-251.456c6.6944 93.6 27.8848 178.176 59.2 240.7936 16.0448 32.1088 33.4656 55.6416 49.5488 69.248 5.5488 4.6912 10.2336 7.6032 13.8688 9.088 1.7024 0.704 2.528 0.8704 3.1104 0.8704 0.576 0 1.408-0.1664 3.1104-0.864 3.6352-1.4912 8.32-4.4032 13.8688-9.0944 16.0832-13.6064 33.504-37.1392 49.5552-69.248 31.3088-62.6176 52.4992-147.1936 59.2-240.7936z m0-128c-6.6944-93.6-27.8848-178.176-59.2-240.7936-16.0448-32.1088-33.4656-55.6416-49.5488-69.248-5.5488-4.6912-10.2336-7.6032-13.8688-9.088-1.7024-0.704-2.528-0.8704-3.1104-0.8704-0.576 0-1.408 0.1664-3.1104 0.864-3.6352 1.4912-8.32 4.4032-13.8688 9.0944-16.0832 13.6064-33.504 37.1392-49.5552 69.248-31.3088 62.6176-52.4992 147.1936-59.2 240.7936h251.4624zM512 1024c-282.7712 0-512-229.2288-512-512S229.2288 0 512 0s512 229.2288 512 512-229.2288 512-512 512z" p-id="1378" fill="#666666"></path></svg> in the lower right corner 
 - [x] Support accessing url with context path suffix
 
 ## Usage
@@ -50,11 +51,14 @@ Copy the `_config.yml` file in the theme folder to the blog root directory and r
 
 If you want to support the publication of articles in both <u>English (en)</u> and <u>Simplified Chinese (zh-CN)</u>, you can consider the following steps:
 
-> Please find complete sample configuration in [hexo-theme-arch-sample](https://github.com/sissilab/hexo-theme-arch-sample).
+> - Please find complete sample configuration in [hexo-theme-arch-sample](https://github.com/sissilab/hexo-theme-arch-sample).
+> - Accessing http://localhost:4000/hexo-theme-arch-sample/ will redirect to http://localhost:4000/hexo-theme-arch-sample/en/ (as `en` is located in the 1st position of `language: [en, zh-CN]`)
+> - English site: http://localhost:4000/hexo-theme-arch-sample/en/
+> - Simplified Chinese site: http://localhost:4000/hexo-theme-arch-sample/zh-CN/
 
 1. Firstly follow the above [Usage](#Usage) to complete download and configuration of the theme.
 2. Set `language: [en, zh-CN]` in `_config.yml`.
-3. Enable navigation bar in `_config.arch.yml`. If you enable `Archives`, `Categories`, `Tags` or `About`, you need create the corresponding files:
+3. Enable navigation bar in `_config.arch.yml`. If you enable `Categories`, `Tags`, `About` or `Friends`, you need create the corresponding files:
     a. Enable `Categories`: 
     Create `source/en/categories/index.md` with the following content:
     ```markdown
