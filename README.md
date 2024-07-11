@@ -159,7 +159,7 @@ If you want to support the publication of articles in both <u>English (en)</u> a
     - Create a new post in Simplified Chinese version: `hexo new post-zh --path zh-CN/hello "Hello"`
 6. Finally start your hexo service: `hexo s --debug`.
 
-## Demo Screenshot
+## Demo Screenshot2
 
 **English (en) Home page**:
 ![hexo-theme-arch-home-en.png](https://s2.loli.net/2024/02/17/64K2nQeVkHhcaEq.png)
