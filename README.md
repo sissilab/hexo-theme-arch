@@ -1,6 +1,6 @@
 # hexo-theme-arch
 
-> This is a light and concise Hexo theme, specifically designed to facilitate of the publication of posts in multiple languages. And it was built upon [hexo-theme-oranges](https://github.com/zchengsite/hexo-theme-oranges) ([English](https://github.com/zchengsite/hexo-theme-oranges/blob/master/README.md) | [简体中文](https://github.com/zchengsite/hexo-theme-oranges/blob/master/README-zh.md)).
+> This is a light and concise Hexo theme, specifically designed to facilitate the publication of posts in multiple languages. And it was built upon [hexo-theme-oranges](https://github.com/zchengsite/hexo-theme-oranges) ([English](https://github.com/zchengsite/hexo-theme-oranges/blob/master/README.md) | [简体中文](https://github.com/zchengsite/hexo-theme-oranges/blob/master/README-zh.md)).
 
 - [Sample Blog Preview: sissilab.top/hexo-theme-arch-sample](https://sissilab.top/hexo-theme-arch-sample/)
 - Please find complete sample configuration in [hexo-theme-arch-sample](https://github.com/sissilab/hexo-theme-arch-sample)
@@ -9,8 +9,8 @@
 
 - [x] Original existing functions from [hexo-theme-oranges](README-oranges.md?tab=readme-ov-file#configuration)
 - [x] Support the publication of posts in multiple languages
-- [x] Add switch-language icon <svg t="1670338371149" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1377" width="16" height="16"><path d="M890.688 576h-124.672c-6.2912 100.928-27.264 192.7296-58.5216 266.5792 95.36-56.512 164.16-153.1072 183.1936-266.5792z m0-128c-19.0336-113.472-87.8336-210.0672-183.1936-266.5792 31.2512 73.856 52.2304 165.6576 58.528 266.5792h124.672zM133.312 448h124.672c6.2912-100.928 27.264-192.7296 58.5216-266.5792C221.1456 237.9328 152.3456 334.528 133.312 448z m0 128c19.0336 113.472 87.8336 210.0672 183.1936 266.5792-31.2512-73.856-52.2304-165.6576-58.528-266.5792H133.312z m504.416 0h-251.456c6.6944 93.6 27.8848 178.176 59.2 240.7936 16.0448 32.1088 33.4656 55.6416 49.5488 69.248 5.5488 4.6912 10.2336 7.6032 13.8688 9.088 1.7024 0.704 2.528 0.8704 3.1104 0.8704 0.576 0 1.408-0.1664 3.1104-0.864 3.6352-1.4912 8.32-4.4032 13.8688-9.0944 16.0832-13.6064 33.504-37.1392 49.5552-69.248 31.3088-62.6176 52.4992-147.1936 59.2-240.7936z m0-128c-6.6944-93.6-27.8848-178.176-59.2-240.7936-16.0448-32.1088-33.4656-55.6416-49.5488-69.248-5.5488-4.6912-10.2336-7.6032-13.8688-9.088-1.7024-0.704-2.528-0.8704-3.1104-0.8704-0.576 0-1.408 0.1664-3.1104 0.864-3.6352 1.4912-8.32 4.4032-13.8688 9.0944-16.0832 13.6064-33.504 37.1392-49.5552 69.248-31.3088 62.6176-52.4992 147.1936-59.2 240.7936h251.4624zM512 1024c-282.7712 0-512-229.2288-512-512S229.2288 0 512 0s512 229.2288 512 512-229.2288 512-512 512z" p-id="1378" fill="#666666"></path></svg> in the lower right corner 
-- [x] Support accessing url with context path suffix
+- [x] Add switch-language icon <img src="data:image/svg+xml,%3Csvg%20t%3D%221670338371149%22%20class%3D%22icon%22%20viewBox%3D%220%200%201024%201024%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20p-id%3D%221377%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Cpath%20d%3D%22M890.688%20576h-124.672c-6.2912%20100.928-27.264%20192.7296-58.5216%20266.5792%2095.36-56.512%20164.16-153.1072%20183.1936-266.5792z%20m0-128c-19.0336-113.472-87.8336-210.0672-183.1936-266.5792%2031.2512%2073.856%2052.2304%20165.6576%2058.528%20266.5792h124.672zM133.312%20448h124.672c6.2912-100.928%2027.264-192.7296%2058.5216-266.5792C221.1456%20237.9328%20152.3456%20334.528%20133.312%20448z%20m0%20128c19.0336%20113.472%2087.8336%20210.0672%20183.1936%20266.5792-31.2512-73.856-52.2304-165.6576-58.528-266.5792H133.312z%20m504.416%200h-251.456c6.6944%2093.6%2027.8848%20178.176%2059.2%20240.7936%2016.0448%2032.1088%2033.4656%2055.6416%2049.5488%2069.248%205.5488%204.6912%2010.2336%207.6032%2013.8688%209.088%201.7024%200.704%202.528%200.8704%203.1104%200.8704%200.576%200%201.408-0.1664%203.1104-0.864%203.6352-1.4912%208.32-4.4032%2013.8688-9.0944%2016.0832-13.6064%2033.504-37.1392%2049.5552-69.248%2031.3088-62.6176%2052.4992-147.1936%2059.2-240.7936z%20m0-128c-6.6944-93.6-27.8848-178.176-59.2-240.7936-16.0448-32.1088-33.4656-55.6416-49.5488-69.248-5.5488-4.6912-10.2336-7.6032-13.8688-9.088-1.7024-0.704-2.528-0.8704-3.1104-0.8704-0.576%200-1.408%200.1664-3.1104%200.864-3.6352%201.4912-8.32%204.4032-13.8688%209.0944-16.0832%2013.6064-33.504%2037.1392-49.5552%2069.248-31.3088%2062.6176-52.4992%20147.1936-59.2%20240.7936h251.4624zM512%201024c-282.7712%200-512-229.2288-512-512S229.2288%200%20512%200s512%20229.2288%20512%20512-229.2288%20512-512%20512z%22%20p-id%3D%221378%22%20fill%3D%22%23666666%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E"> in the lower right corner for switching between different language versions of a post
+- [x] Support accessing url with context path
 
 ## Installation & Usage
 
@@ -114,93 +114,109 @@ lang: {lang}
 For the case of `language: [en, zh-CN]`:
 
 <details>
-<summary>1. Enable **About**:</summary>
-1. Create `source/en/about/index.md` with the following content:
-    ```markdown
-    ---
-    title: about
-    type: "about"
-    lang: en
-    ---
+<summary>1. Enable <b>About</b>:</summary>
+1. Create <code>source/en/about/index.md</code> with the following content:   
 
-    Introduce yourself here!
-    ```
+```markdown
+---
+title: about
+type: "about"
+lang: en
+---
+
+Introduce yourself here!
+```
+
 2. Create `source/zh-CN/about/index.md` with the following content:
-    ```markdown
-    ---
-    title: about
-    type: "about"
-    lang: zh-CN
-    ---
 
-    在这里介绍你自己吧！
-    ```
+```markdown
+---
+title: about
+type: "about"
+lang: zh-CN
+---
+
+在这里介绍你自己吧！
+```
+
 </details>
 
 <details>
-<summary>2. Enable **Categories**: </summary>
-1. Create `source/en/categories/index.md` with the following content:
-    ```markdown
-    ---
-    title: categories
-    type: "categories"
-    lang: en
-    ---
+<summary>2. Enable <b>Categories</b>: </summary>
+1. Create <code>source/en/categories/index.md</code> with the following content:
 
-    ```
-2. Create `source/zh-CN/categories/index.md` with the following content:
-    ```markdown
-    ---
-    title: categories
-    type: "categories"
-    lang: zh-CN
-    ---
-    
-    ```
+```markdown
+---
+title: categories
+type: "categories"
+lang: en
+---
+
+```
+
+2. Create <code>source/zh-CN/categories/index.md</code> with the following content:
+
+```markdown
+---
+title: categories
+type: "categories"
+lang: zh-CN
+---
+
+```
+
 </details>
 
 <details>
-<summary>3. Enable **Friends**: </summary>
-1. Create `source/en/friends/index.md` with the following content:
-    ```markdown
-    ---
-    title: friends
-    type: "friends"
-    lang: en
-    ---
-    
-    ```
-2. Create `source/zh-CN/friends/index.md` with the following content:
-    ```markdown
-    ---
-    title: friends
-    type: "friends"
-    lang: zh-CN
-    ---
-    
-    ```
+<summary>3. Enable <b>Friends</b>: </summary>
+1. Create <b>source/en/friends/index.md</b> with the following content:
+
+```markdown
+---
+title: friends
+type: "friends"
+lang: en
+---
+
+```
+
+2. Create <b>source/zh-CN/friends/index.md</b> with the following content:
+
+```markdown
+---
+title: friends
+type: "friends"
+lang: zh-CN
+---
+
+```
+
 </details>
 
 <details>
-<summary>4. Enable **Tags**: </summary>
-1. Create `source/en/tags/index.md` with the following content:
-    ```markdown
-    ---
-    title: tags
-    type: "tags"
-    lang: en
-    ---
-    
-    ```
-2. Create `source/zh-CN/tags/index.md` with the following content:
-    ```markdown
-    ---
-    title: tags
-    type: "tags"
-    lang: zh-CN
-    ---
-    
-    ```
+<summary>4. Enable <b>Tags</b>: </summary>
+1. Create <code>source/en/tags/index.md</code> with the following content:
+
+```markdown
+---
+title: tags
+type: "tags"
+lang: en
+---
+
+```
+
+2. Create <code>source/zh-CN/tags/index.md</code> with the following content:
+
+```markdown
+---
+title: tags
+type: "tags"
+lang: zh-CN
+---
+
+```
+
 </details>
 
 ### 6. Creating Posts in Different Languages
@@ -212,16 +228,16 @@ Some cases' directory structure:
 ```
 source/
 └─ _posts/
-    ├─ en/
-    │   ├─ Hello-World.md
-    │   └─ design-pattern/
-    │       ├─ singleton.md
-    │       └─ abstract-factory.md
-    └─ zh-CN/
-        ├─ Hello-World.md
-        └─ design-pattern/
-            ├─ singleton.md
-            └─ abstract-factory.md
+  ├─ en/
+  │ ├─ Hello-World.md
+  │ └─ design-pattern/
+  │   ├─ singleton.md
+  │   └─ abstract-factory.md
+  └─ zh-CN/
+    ├─ Hello-World.md
+    └─ design-pattern/
+      ├─ singleton.md
+      └─ abstract-factory.md
 ```
 
 #### 6.1. Hexo Command
