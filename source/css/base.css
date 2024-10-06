@@ -8,7 +8,7 @@ html, body {
   letter-spacing: 0.01rem;
   background-color: var(--bg-body);
   transition: color 400ms ease-in-out 0s, background-color 400ms ease-in-out 0s;
-  font-family: 'Noto Serif SC', Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif
+  font-family: 'LXGW WenKai TC', sans-serif, Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei"
 }
 
 body.hidden {
@@ -19,10 +19,9 @@ body.hidden {
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  line-height: 2;
   color: #24292e;
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.5;
   word-wrap: break-word;
   color: var(--color-text-md-content)
 }
@@ -396,10 +395,15 @@ a:hover {
 
 .post-details .post-title {
   text-align: center;
-  font-size: 2.2rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 800;
   color: var(--color-text-a);
   padding-bottom: 10px;
+}
+
+.post-details .post-title:hover {
+  font-size: 3.1rem;
+  color: #1c84c8;
 }
 
 .post-details .post-attach {
